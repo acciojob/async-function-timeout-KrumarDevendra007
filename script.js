@@ -17,7 +17,7 @@ const timeDelay = parseInt(delay, 10);
 
 
 	if(text & timeDelay){
-		await waitForDelay(delay)
+		await waitForDelay(timeDelay)
 		output.textContent = text;
 	}
 	else{
