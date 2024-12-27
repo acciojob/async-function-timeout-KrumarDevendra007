@@ -1,7 +1,7 @@
 //your JS code here. If required.
 
-const text = document.getElementById("text");
-const delay = document.getElmentById("delay");
+const text = document.getElementById("text").value;
+const delay = document.getElmentById("delay").value;
 const output = document.getElementById("output");
 
 funtion getData() {
