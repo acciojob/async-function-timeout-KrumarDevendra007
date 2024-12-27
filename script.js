@@ -1,24 +1,30 @@
 //your JS code here. If required.
+document.getElementById("btn").addEventListener("click", async function(){
 
 const text = document.getElementById("text").value;
 const delay = document.getElmentById("delay").value;
 const output = document.getElementById("output");
 
-funtion getData() {
-	return new Promise((resolve()) => {
-		setTimeOut(() => {
-			resolve(() => {
-				output.innerHTML = `${text}`			
-			});
-		}, delay);
-	});
-}
+const timeDelay = parseInt(delay, 10);
 
-async funtion fetchData(){
-	try{
-	  const data = await getData();
+	output.textContent = "";
+	
+ const waitForDelay = (ms) => {
+	 return new Promise((resolve) => {
+		 setTimeout(resolve, ms)
+	 });
+ };
+
+
+	if(text & timeDelay){
+		await waitForDelay(delay)
+		output.textContent = text;
 	}
-	catch (error){
-		console.log(error);
+	else{
+		output.textContent = "Please enter valid text and delay.";
 	}
-}
+
+	
+});
+
+
